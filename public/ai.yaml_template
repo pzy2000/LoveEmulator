@@ -1,0 +1,9 @@
+llm:
+  service: openai
+  model1: claude-haiku-4-5
+  # model2: gpt-5.2
+  # model3: gpt-5-mini
+  # model4: gpt-5.1
+  model2: gemini-2.5-flash
+  openai_api_key: 
+  openai_base_url: 

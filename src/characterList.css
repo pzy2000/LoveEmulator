@@ -1,0 +1,133 @@
+/* Character List Styles */
+
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 32px;
+}
+
+@media (max-width: 800px) {
+    .main-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.character-list-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+}
+
+.character-list-panel h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.contacts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.character-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 12px;
+    transition: background 0.2s;
+}
+
+.character-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.char-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.avatar-med {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #444;
+}
+
+.char-header h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+}
+
+.status-tag {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+}
+
+.status-tag.stranger {
+    color: #888;
+}
+
+.status-tag.friend {
+    color: var(--accent-gold);
+}
+
+.status-tag.dating {
+    color: var(--accent-pink);
+}
+
+.rel-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #888;
+    gap: 8px;
+}
+
+.stat-row span {
+    width: 40px;
+}
+
+.mini-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mini-bar>div {
+    height: 100%;
+    background: var(--accent-gold);
+}
+
+.chat-btn {
+    width: 100%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.chat-btn:hover {
+    background: var(--accent-pink);
+    border-color: transparent;
+}
