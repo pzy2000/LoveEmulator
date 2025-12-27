@@ -1,25 +1,17 @@
 import React from 'react';
 import { ACTIONS, actionSystem } from '../engine/ActionSystem';
 import { useGameStore } from '../store/useGameStore';
-import { eventEngine, type GameEvent } from '../engine/EventEngine';
 import { TEXTS } from '../data/locales';
 
-interface Props {
-    onEventTrigger: (event: GameEvent) => void;
-}
 
-export const ActionGrid: React.FC<Props> = ({ onEventTrigger }) => {
+export const ActionGrid: React.FC = () => {
     const performAction = useGameStore(state => state.performAction);
     const gameState = useGameStore();
 
     const handleAction = async (actionId: string) => {
+        // performAction already handles event triggering internally
+        // based on action.eventTrigger configuration
         performAction(actionId);
-
-        // Trigger event check
-        const evt = await eventEngine.triggerEvent(gameState);
-        if (evt) {
-            onEventTrigger(evt);
-        }
     };
 
     return (

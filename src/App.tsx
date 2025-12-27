@@ -7,7 +7,7 @@ import { CharacterList } from './components/CharacterList';
 import { DialogueView } from './components/DialogueView';
 import { LocationSelector } from './components/LocationSelector';
 import { DebugPanel } from './components/DebugPanel';
-import { eventEngine, type GameEvent, type EventChoice } from './engine/EventEngine';
+import { eventEngine, type EventChoice } from './engine/EventEngine';
 import { persistenceManager } from './engine/PersistenceManager';
 import { useGameStore } from './store/useGameStore';
 import { TEXTS } from './data/locales';
@@ -39,9 +39,7 @@ function App() {
     }
   }, []);
 
-  const handleEventTrigger = (event: GameEvent) => {
-    setEvent(event);
-  };
+
 
   // Actually, let's just add a dedicated action to the store for updating relationships or replacing state.
   // For now, I'll access the store's set state via a new method in useGameStore or just direct manipulation if I export the setter.
@@ -156,7 +154,7 @@ function App() {
         <div className="main-content-grid">
           <div className="interaction-area">
             <LocationSelector />
-            <ActionGrid onEventTrigger={handleEventTrigger} />
+            <ActionGrid />
           </div>
 
           <aside className="sidebar">

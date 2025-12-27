@@ -42,7 +42,7 @@ export const ACTIONS: ActionDef[] = [
         description: 'A casual meet-up. Low risk, moderate reward.',
         category: 'social',
         cost: { money: 80, energy: 10, time: 1 },
-        requirements: { locations: ['cafe'] },
+        requirements: { locations: ['restaurant', 'cafe'] },
         effects: {
             stats: { communication: 1 }
         },

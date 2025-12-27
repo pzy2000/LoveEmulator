@@ -198,7 +198,7 @@ export const useGameStore = create<GameStore>((set, get) => ({
                         });
                         // @ts-ignore
                         get().addLog(`Memory saved for ${state.characters[charId].name}`);
-                        get().showNotification(`Memory Saved: ${summary}`, 15000);
+                        // get().showNotification(`Memory Saved: ${summary}`, 15000);
                         // Trigger auto-save to ensure persistence
                         get().saveGame();
                     } else {
