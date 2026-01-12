@@ -59,6 +59,22 @@ export class RelationshipManager {
             memories: []
         };
     }
+    applyAttributeUpdates(state: GameState, characterId: string, updates: Partial<RelationshipState>): GameState {
+        const newState = JSON.parse(JSON.stringify(state)); // Deep clone
+        const rel = newState.player.relationships[characterId] || this.initializeRelationship();
+
+        if (updates.trust !== undefined) rel.trust = Math.max(0, Math.min(100, rel.trust + updates.trust));
+        if (updates.comfort !== undefined) rel.comfort = Math.max(0, Math.min(100, rel.comfort + updates.comfort));
+        if (updates.attraction !== undefined) rel.attraction = Math.max(0, Math.min(100, rel.attraction + updates.attraction));
+        if (updates.respect !== undefined) rel.respect = Math.max(0, Math.min(100, rel.respect + updates.respect));
+        if (updates.investment !== undefined) rel.investment = Math.max(0, Math.min(100, rel.investment + updates.investment));
+        if (updates.conflict !== undefined) rel.conflict = Math.max(0, Math.min(100, rel.conflict + updates.conflict));
+
+        // Ensure atomic updates for other fields if needed, but primarily stats for now
+
+        newState.player.relationships[characterId] = rel;
+        return newState;
+    }
 }
 
 export const relationshipManager = new RelationshipManager();

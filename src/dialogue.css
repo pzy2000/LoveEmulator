@@ -103,3 +103,33 @@
     cursor: pointer;
     color: #1a1d24;
 }
+
+.input-area-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+}
+
+.reply-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.reply-options .choice-btn {
+    width: 100%;
+    margin-bottom: 0; /* Override default margin */
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.reply-options .choice-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-gold);
+}

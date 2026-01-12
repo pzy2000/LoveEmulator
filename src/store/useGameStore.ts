@@ -58,6 +58,7 @@ interface GameStore extends GameState {
     handleEventOutcome: (outcome: any) => void;
     showNotification: (text: string, duration?: number, type?: 'info' | 'success' | 'error') => void;
     hideNotification: () => void;
+    applyRelationshipUpdates: (characterId: string, updates: any) => void;
 }
 
 export const useGameStore = create<GameStore>((set, get) => ({
@@ -138,6 +139,9 @@ export const useGameStore = create<GameStore>((set, get) => ({
     })),
     updateRelationship: (characterId, choice) => set((state) => {
         return relationshipManager.updateRelationship(state, characterId, choice);
+    }),
+    applyRelationshipUpdates: (characterId: string, updates: any) => set((state) => {
+        return relationshipManager.applyAttributeUpdates(state, characterId, updates);
     }),
     startDialogue: (characterId) => {
         const state = get();

@@ -31,13 +31,21 @@ export const CharacterList: React.FC = () => {
 
                             <div className="rel-stats">
                                 {/* Relationship Stats (Trust, Attraction) */}
-                                <div className="stat-row">
+                                <div className="stat-row has-tooltip">
                                     <span>{t.ui.trust}</span>
                                     <div className="mini-bar"><div style={{ width: `${rel.trust}%` }} /></div>
+                                    <div className="tooltip-popup">
+                                        <span className="value">{rel.trust}</span>
+                                        <span className="label">Trust</span>
+                                    </div>
                                 </div>
-                                <div className="stat-row">
+                                <div className="stat-row has-tooltip">
                                     <span>{t.ui.like}</span>
                                     <div className="mini-bar"><div style={{ width: `${rel.attraction}%` }} /></div>
+                                    <div className="tooltip-popup">
+                                        <span className="value">{rel.attraction}</span>
+                                        <span className="label">Attraction</span>
+                                    </div>
                                 </div>
 
                                 {/* Divider */}

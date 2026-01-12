@@ -131,3 +131,60 @@
     background: var(--accent-pink);
     border-color: transparent;
 }
+
+/* Tooltip Styles */
+.stat-row.has-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip-popup {
+    display: none;
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    /* Center relative to the row */
+    transform: translateX(-50%);
+    background: #1a1d24;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    z-index: 20;
+    pointer-events: none;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+}
+
+.stat-row.has-tooltip:hover .tooltip-popup {
+    display: flex;
+    animation: fadeIn 0.15s ease-out;
+}
+
+.tooltip-popup .value {
+    color: var(--accent-gold);
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.tooltip-popup .label {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #888;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

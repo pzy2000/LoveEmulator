@@ -76,6 +76,10 @@ export const DialogueView: React.FC = () => {
             if (response.internal_reaction) {
                 console.log("Internal Reaction:", response.internal_reaction);
             }
+            if (response.updates) {
+                console.log("Applying relationship updates:", response.updates);
+                useGameStore.getState().applyRelationshipUpdates(character.id, response.updates);
+            }
         }
     };
 
@@ -105,8 +109,9 @@ export const DialogueView: React.FC = () => {
                     {activeDialogue.replyOptions && activeDialogue.replyOptions.length > 0 && !isTyping && (
                         <div className="reply-options">
                             {activeDialogue.replyOptions.map(opt => (
-                                <button key={opt.id} onClick={() => handleOptionClick(opt)}>
-                                    {opt.text}
+                                <button key={opt.id} onClick={() => handleOptionClick(opt)} className="choice-btn">
+                                    <span>{opt.text}</span>
+                                    <span className="intent-tag">{opt.intent}</span>
                                 </button>
                             ))}
                         </div>

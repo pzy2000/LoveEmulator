@@ -158,11 +158,16 @@ Match the tone and slang appropriate for the character's Age and Status.
 Output JSON format:
 {
   "text": "character response...",
-    "choices": [
-      { "id": "c1", "text": "...", "intent": "friendly" },
-      { "id": "c2", "text": "...", "intent": "flirt" },
-      { "id": "c3", "text": "...", "intent": "negative" }
-    ]
+  "updates": {
+     "trust": Number (optional, +/-),
+     "comfort": Number (optional, +/-),
+     "attraction": Number (optional, +/-)
+  },
+  "choices": [
+    { "id": "c1", "text": "...", "intent": "friendly" },
+    { "id": "c2", "text": "...", "intent": "flirt" },
+    { "id": "c3", "text": "...", "intent": "negative" }
+  ]
 }
 `;
 

@@ -5,6 +5,14 @@ import { DIALOGUE_GENERATOR_SYSTEM_PROMPT, MEMORY_SUMMARIZER_PROMPT } from '../s
 export interface DialogueResponse {
     text: string;
     internal_reaction?: string;
+    updates?: {
+        trust?: number;
+        comfort?: number;
+        attraction?: number;
+        respect?: number;
+        investment?: number;
+        conflict?: number;
+    };
     choices?: Array<{ id: string, text: string, intent: string }>;
 }
 
