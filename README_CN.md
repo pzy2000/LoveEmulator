@@ -48,7 +48,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/LoveEmulator.git
+git clone https://github.com/pzy2000/LoveEmulator.git
 cd LoveEmulator
 
 # 安装依赖
@@ -202,8 +202,8 @@ npm run lint
 
 ## 📬 联系方式
 
-- **问题反馈**: [GitHub Issues](https://github.com/yourusername/LoveEmulator/issues)
-- **讨论交流**: [GitHub Discussions](https://github.com/yourusername/LoveEmulator/discussions)
+- **问题反馈**: [GitHub Issues](https://github.com/pzy2000/LoveEmulator/issues)
+- **讨论交流**: [GitHub Discussions](https://github.com/pzy2000/LoveEmulator/discussions)
 
 ---
 

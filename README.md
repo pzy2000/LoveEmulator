@@ -48,7 +48,7 @@ Each NPC has multidimensional relationship parameters:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/LoveEmulator.git
+git clone https://github.com/pzy2000/LoveEmulator.git
 cd LoveEmulator
 
 # Install dependencies
@@ -202,8 +202,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📬 Contact
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/LoveEmulator/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/LoveEmulator/discussions)
+- **Issues**: [GitHub Issues](https://github.com/pzy2000/LoveEmulator/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/pzy2000/LoveEmulator/discussions)
 
 ---
 
